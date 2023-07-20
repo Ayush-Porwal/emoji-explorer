@@ -1,0 +1,13 @@
+.heading {
+  color: #fff;
+}
+
+.mycard {
+  background-color: #111;
+  color: #fafafa;
+  border: 1px solid #333;
+}
+
+.mycard:hover {
+  background-color: hsla(0, 0%, 100%, 0.02);
+}
