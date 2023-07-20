@@ -61,7 +61,10 @@ function App() {
         <i className="pi pi-search" />
         <InputText
           value={category}
-          onChange={(e) => setCategory(e.target.value)}
+          onChange={(e) => {
+            setCategory(e.target.value);
+            setFirst(0);
+          }}
           placeholder="Search emojis by category"
           pt={{
             root: { className: "w-full" },
