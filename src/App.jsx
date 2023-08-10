@@ -76,9 +76,15 @@ function App() {
             </span>
             {isError ? (
                 <div
-                    className={`flex justify-content-center ${classes.errorHeading} mb-4`}
+                    className={`flex flex-column align-items-center ${classes.errorHeading} mb-4`}
                 >
-                    Sorry, seems like api is down... :(
+                    <span>Sorry, seems like api is down... :(</span>
+                    <span>
+                        If interested, you can see screenshots{" "}
+                        <a href="https://github.com/Ayush-Porwal/emoji-explorer/tree/main/screenshots">
+                            here
+                        </a>
+                    </span>
                 </div>
             ) : emojiList.length === 0 ? (
                 <div>
