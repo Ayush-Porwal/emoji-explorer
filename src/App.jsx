@@ -14,11 +14,13 @@ function App() {
   const [copiedIdx, setCopiedIdx] = useState(null);
 
   const [category, setCategory] = useState("");
+  const [isError, setError] = useState(false);
 
   useEffect(() => {
     fetch("https://emojihub.yurace.pro/api/all")
       .then((response) => response.json())
-      .then((data) => setEmojiList(data));
+      .then((data) => setEmojiList(data))
+      .catch(() => setError(true))
   }, []);
 
   const onPageChange = (event) => {
@@ -85,6 +87,12 @@ function App() {
             Loading Data...
           </div>
         </div>
+      ) : isError ? (
+        <div
+            className={`flex justify-content-center ${classes.errorHeading} mb-4`}
+          >
+            Sorry, seems like api is down... :(
+          </div>
       ) : (
         <div className="flex flex-column gap-2 mb-4">
           {(filterEmojiList() || []).length === 0 ? (

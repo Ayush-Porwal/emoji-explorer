@@ -2,6 +2,10 @@
   color: #fff;
 }
 
+.errorHeading {
+  color: red;
+}
+
 .mycard {
   background-color: #111;
   color: #fafafa;
